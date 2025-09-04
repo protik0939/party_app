@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/widgets/SignUpPage/SignUp.dart';
+import 'package:flutter_application_1/widgets/loginPage/SignIn.dart';
 
-class SignIn extends StatefulWidget {
-  const SignIn({super.key});
+class SignUp extends StatefulWidget {
+  const SignUp({super.key});
 
   @override
-  State<SignIn> createState() => _SignInState();
+  State<SignUp> createState() => _SignUpState();
 }
 
-class _SignInState extends State<SignIn> {
+class _SignUpState extends State<SignUp> {
   bool _viewPassword = false;
 
   void _changeVisibility() {
@@ -19,15 +19,14 @@ class _SignInState extends State<SignIn> {
 
   @override
   Widget build(BuildContext context) {
-    var w = MediaQuery.widthOf(context);
     var h = MediaQuery.heightOf(context);
+    var w = MediaQuery.widthOf(context);
 
     return Scaffold(
       body: SingleChildScrollView(
-
         child: Container(
-          width: w,
           height: h,
+          width: w,
           color: Color(0xFF060423),
           child: Padding(
             padding: const EdgeInsets.all(25.0),
@@ -37,7 +36,7 @@ class _SignInState extends State<SignIn> {
                 Image.asset('assets/images/appIcon.png', height: 80, width: 80),
                 SizedBox(height: 30),
                 Text(
-                  'Sign In',
+                  'Create Account',
                   style: TextStyle(
                     fontFamily: 'Manrope_bold',
                     color: Colors.white,
@@ -45,10 +44,34 @@ class _SignInState extends State<SignIn> {
                   ),
                 ),
                 Text(
-                  'Welcome back, Let’s sign in to continue',
+                  'Create an account to continue!',
                   style: TextStyle(fontFamily: 'Manrope', color: Colors.white),
                 ),
                 SizedBox(height: 40),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Your Name',
+                      textAlign: TextAlign.left,
+                      style: TextStyle(color: Colors.white),
+                    ),
+                    SizedBox(height: 10),
+                    TextField(
+                      style: TextStyle(color: Colors.white),
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Colors.white,
+                            width: 1.0,
+                          ),
+                        ),
+                        hintText: 'example@gmail.com',
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 30),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -62,7 +85,10 @@ class _SignInState extends State<SignIn> {
                       style: TextStyle(color: Colors.white),
                       decoration: InputDecoration(
                         border: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.white, width: 1.0),
+                          borderSide: BorderSide(
+                            color: Colors.white,
+                            width: 1.0,
+                          ),
                         ),
                         hintText: 'example@gmail.com',
                       ),
@@ -86,7 +112,10 @@ class _SignInState extends State<SignIn> {
                       autocorrect: false,
                       decoration: InputDecoration(
                         border: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.white, width: 1.0),
+                          borderSide: BorderSide(
+                            color: Colors.white,
+                            width: 1.0,
+                          ),
                         ),
                         hintText: 'Password',
                         suffixIcon: IconButton(
@@ -106,44 +135,7 @@ class _SignInState extends State<SignIn> {
                   ],
                 ),
                 SizedBox(height: 10),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Row(
-                      children: [
-                        Checkbox(
-                          fillColor: MaterialStateProperty.resolveWith((states) {
-                            if (!states.contains(MaterialState.selected)) {
-                              return Colors.transparent;
-                            }
-                            return null;
-                          }),
-                          side: const BorderSide(
-                            color: Color.fromARGB(255, 255, 255, 255),
-                            width: 1,
-                          ),
-                          value: _checked,
-                          onChanged: (bool? value) {
-                            setState(() {
-                              _checked = value!;
-                            });
-                          },
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(6),
-                          ),
-                        ),
-                        Text(
-                          'Remember me',
-                          style: TextStyle(color: Colors.white),
-                        ),
-                      ],
-                    ),
-                    Text(
-                      'Forgot Password?',
-                      style: TextStyle(color: Color(0xFF7c14f2)),
-                    ),
-                  ],
-                ),
+
                 SizedBox(height: 20),
                 SizedBox(
                   height: 60,
@@ -170,7 +162,7 @@ class _SignInState extends State<SignIn> {
                       child: Container(
                         alignment: Alignment.center,
                         child: Text(
-                          'LOG IN',
+                          'SIGN UP',
                           style: TextStyle(
                             color: Colors.white,
                             fontFamily: 'Manrope_bold',
@@ -185,18 +177,18 @@ class _SignInState extends State<SignIn> {
                   child: Row(
                     children: [
                       Text(
-                        'Don\'t you have an account?',
+                        'Already have an account?',
                         style: TextStyle(color: Colors.white),
                       ),
                       TextButton(
                         onPressed: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => SignUp()),
+                            MaterialPageRoute(builder: (context) => SignIn()),
                           );
                         },
                         child: Text(
-                          'Register Now',
+                          'Sign In',
                           style: TextStyle(color: Color(0xFF7c14f2)),
                         ),
                       ),
