@@ -15,20 +15,6 @@ class _Preloginscreen2State extends State<Preloginscreen2> {
     var w = MediaQuery.widthOf(context);
 
     return Scaffold(
-      floatingActionButton: Padding(
-        padding: const EdgeInsets.only(left: 0, right: 30, top: 0, bottom: 0),
-        child: FloatingActionButton(
-          shape: CircleBorder(),
-          backgroundColor: Color(0xFF7C14F2),
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => SignIn()),
-            );
-          },
-          child: Icon(Icons.keyboard_arrow_right, color: Colors.white),
-        ),
-      ),
       body: Center(
         child: Stack(
           children: [
@@ -114,6 +100,23 @@ class _Preloginscreen2State extends State<Preloginscreen2> {
                       child: Text(
                         'SKIP',
                         style: TextStyle(color: Color(0xFFBDBDBD)),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 70,
+                      width: 70,
+                      child: ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => SignIn()),
+                          );
+                        },
+                        child: Icon(Icons.keyboard_arrow_right),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Color(0xFF7C14F2),
+                          foregroundColor: Colors.white,
+                        ),
                       ),
                     ),
                   ],

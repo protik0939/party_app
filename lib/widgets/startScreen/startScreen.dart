@@ -25,24 +25,23 @@ class _StartScreenState extends State<StartScreen> {
   route() {
     Navigator.pushReplacement(
       context,
-      MaterialPageRoute(builder: (context) => Preloginscreen())
+      MaterialPageRoute(builder: (context) => Preloginscreen()),
     );
   }
 
   @override
   Widget build(BuildContext context) {
+
     var h = MediaQuery.heightOf(context);
     var w = MediaQuery.widthOf(context);
 
     return Scaffold(
-      body: SizedBox(
+      body: Container(
         height: h,
         width: w,
-        child: Center(
-          child: Image.asset(
-            'assets/images/splash_screen.png',
-            fit: BoxFit.fitHeight,
-          ),
+        child: Image.asset(
+          'assets/images/splash_screen.png',
+          fit: BoxFit.fitHeight,
         ),
       ),
     );

@@ -16,20 +16,6 @@ class _PreloginscreenState extends State<Preloginscreen> {
     var w = MediaQuery.widthOf(context);
 
     return Scaffold(
-      floatingActionButton: Padding(
-        padding: const EdgeInsets.only(left: 0, right: 30, top: 0, bottom: 0),
-        child: FloatingActionButton(
-          shape: CircleBorder(),
-          backgroundColor: Color(0xFF7C14F2),
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => Preloginscreen2()),
-            );
-          },
-          child: Icon(Icons.keyboard_arrow_right, color: Colors.white),
-        ),
-      ),
       body: Center(
         child: Stack(
           children: [
@@ -81,7 +67,6 @@ class _PreloginscreenState extends State<Preloginscreen> {
                             ),
 
                             SizedBox(width: 10),
-
                             Container(
                               height: 10,
                               width: 10,
@@ -109,12 +94,32 @@ class _PreloginscreenState extends State<Preloginscreen> {
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(
-                            builder: (context) => SignIn(),
-                          ),
+                          MaterialPageRoute(builder: (context) => SignIn()),
                         );
                       },
-                      child:Text('SKIP', style: TextStyle(color: Color(0xFFBDBDBD))),
+                      child: Text(
+                        'SKIP',
+                        style: TextStyle(color: Color(0xFFBDBDBD)),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 70,
+                      width: 70,
+                      child: ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Preloginscreen2(),
+                            ),
+                          );
+                        },
+                        child: Icon(Icons.keyboard_arrow_right),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Color(0xFF7C14F2),
+                          foregroundColor: Colors.white,
+                        ),
+                      ),
                     ),
                   ],
                 ),
