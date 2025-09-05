@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/widgets/SignUpPage/SignUp.dart';
+import 'package:flutter_application_1/widgets/loginPage/ForgotPassword/VerificationMethods.dart';
 
 class SignIn extends StatefulWidget {
   const SignIn({super.key});
@@ -138,9 +139,19 @@ class _SignInState extends State<SignIn> {
                         ),
                       ],
                     ),
-                    Text(
-                      'Forgot Password?',
-                      style: TextStyle(color: Color(0xFF7c14f2)),
+                    TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => VerificationMethods(),
+                        ),
+                      );
+                      },
+                      child: Text(
+                        'Forgot Password?',
+                        style: TextStyle(color: Color(0xFF7c14f2)),
+                      ),
                     ),
                   ],
                 ),
@@ -157,7 +168,11 @@ class _SignInState extends State<SignIn> {
                       backgroundColor: Colors.transparent,
                       shadowColor: Colors.transparent,
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => VerificationMethods()));
+                    },
                     child: Ink(
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
