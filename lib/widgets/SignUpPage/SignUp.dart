@@ -149,7 +149,12 @@ class _SignUpState extends State<SignUp> {
                       backgroundColor: Colors.transparent,
                       shadowColor: Colors.transparent,
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => SignIn()),
+                      );
+                    },
                     child: Ink(
                       decoration: BoxDecoration(
                         gradient: LinearGradient(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/widgets/HomePage/HomePage.dart';
 import 'package:flutter_application_1/widgets/SignUpPage/SignUp.dart';
 import 'package:flutter_application_1/widgets/loginPage/ForgotPassword/VerificationMethods.dart';
 
@@ -171,7 +172,7 @@ class _SignInState extends State<SignIn> {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => VerificationMethods()));
+                        MaterialPageRoute(builder: (context) => Homepage()));
                     },
                     child: Ink(
                       decoration: BoxDecoration(
