@@ -15,7 +15,7 @@ class _NewPasswordInputState extends State<NewPasswordInput> {
     _viewPassword = !_viewPassword;
   }
 
-  var _checked = false;
+  final _checked = false;
 
   @override
   Widget build(BuildContext context) {

@@ -36,7 +36,7 @@ class _StartScreenState extends State<StartScreen> {
     var w = MediaQuery.widthOf(context);
 
     return Scaffold(
-      body: Container(
+      body: SizedBox(
         height: h,
         width: w,
         child: Image.asset(

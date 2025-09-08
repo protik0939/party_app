@@ -69,14 +69,14 @@ class _VerificationMethodsState extends State<VerificationMethods> {
                 height: 70,
                 child: OutlinedButton(
                   style: ButtonStyle(
-                    side: MaterialStateProperty.all(
+                    side: WidgetStateProperty.all(
                       BorderSide(
                         color: _method == 'sms'
                             ? Colors.deepPurple
                             : Colors.white,
                       ),
                     ),
-                    shape: MaterialStateProperty.all(
+                    shape: WidgetStateProperty.all(
                       RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
                       ),
@@ -135,14 +135,14 @@ class _VerificationMethodsState extends State<VerificationMethods> {
                 height: 70,
                 child: OutlinedButton(
                   style: ButtonStyle(
-                    side: MaterialStateProperty.all(
+                    side: WidgetStateProperty.all(
                       BorderSide(
                         color: _method == 'mail'
                             ? Colors.deepPurple
                             : Colors.white,
                       ),
                     ),
-                    shape: MaterialStateProperty.all(
+                    shape: WidgetStateProperty.all(
                       RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
                       ),

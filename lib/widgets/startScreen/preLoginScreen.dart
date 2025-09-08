@@ -114,11 +114,11 @@ class _PreloginscreenState extends State<Preloginscreen> {
                             ),
                           );
                         },
-                        child: Icon(Icons.keyboard_arrow_right),
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Color(0xFF7C14F2),
                           foregroundColor: Colors.white,
                         ),
+                        child: Icon(Icons.keyboard_arrow_right),
                       ),
                     ),
                   ],

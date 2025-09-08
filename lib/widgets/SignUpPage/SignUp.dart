@@ -15,7 +15,7 @@ class _SignUpState extends State<SignUp> {
     _viewPassword = !_viewPassword;
   }
 
-  var _checked = false;
+  final _checked = false;
 
   @override
   Widget build(BuildContext context) {

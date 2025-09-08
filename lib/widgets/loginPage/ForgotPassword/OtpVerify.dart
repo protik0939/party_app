@@ -45,7 +45,7 @@ class _OtpverifyState extends State<Otpverify> {
                 ],
               ),
               SizedBox(height: 50),
-              Container(
+              SizedBox(
                 width: w,
                 child: Text(
                   'Authentication Code',
@@ -55,7 +55,7 @@ class _OtpverifyState extends State<Otpverify> {
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 10),
-                child: Container(
+                child: SizedBox(
                   width: w,
                   child: RichText(
                     text: TextSpan(

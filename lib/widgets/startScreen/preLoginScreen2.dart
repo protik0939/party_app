@@ -112,11 +112,11 @@ class _Preloginscreen2State extends State<Preloginscreen2> {
                             MaterialPageRoute(builder: (context) => SignIn()),
                           );
                         },
-                        child: Icon(Icons.keyboard_arrow_right),
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Color(0xFF7C14F2),
                           foregroundColor: Colors.white,
                         ),
+                        child: Icon(Icons.keyboard_arrow_right),
                       ),
                     ),
                   ],

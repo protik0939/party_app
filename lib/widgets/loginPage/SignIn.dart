@@ -117,8 +117,8 @@ class _SignInState extends State<SignIn> {
                     Row(
                       children: [
                         Checkbox(
-                          fillColor: MaterialStateProperty.resolveWith((states) {
-                            if (!states.contains(MaterialState.selected)) {
+                          fillColor: WidgetStateProperty.resolveWith((states) {
+                            if (!states.contains(WidgetState.selected)) {
                               return Colors.transparent;
                             }
                             return null;
