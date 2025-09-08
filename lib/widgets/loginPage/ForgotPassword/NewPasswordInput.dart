@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/widgets/loginPage/SignIn.dart';
 
 class NewPasswordInput extends StatefulWidget {
   const NewPasswordInput({super.key});
@@ -138,7 +139,12 @@ class _NewPasswordInputState extends State<NewPasswordInput> {
                     backgroundColor: Colors.transparent,
                     shadowColor: Colors.transparent,
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => SignIn()),
+                    );
+                  },
                   child: Ink(
                     decoration: BoxDecoration(
                       gradient: LinearGradient(
@@ -151,7 +157,7 @@ class _NewPasswordInputState extends State<NewPasswordInput> {
                     child: Container(
                       alignment: Alignment.center,
                       child: Text(
-                        'SIGN UP',
+                        'SAVE CHANGES',
                         style: TextStyle(
                           color: Colors.white,
                           fontFamily: 'Manrope_bold',

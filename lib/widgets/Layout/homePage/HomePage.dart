@@ -10,6 +10,8 @@ class Homepage extends StatefulWidget {
 class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
-    return Container(child: Text('Homepage'));
+    return Center(
+      child: Text('This is Home Page'),
+    );
   }
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/widgets/HomePage/HomePage.dart';
+import 'package:flutter_application_1/widgets/Layout/Layout.dart';
 import 'package:flutter_application_1/widgets/SignUpPage/SignUp.dart';
+import 'package:flutter_application_1/widgets/Layout/homePage/HomePage.dart';
 import 'package:flutter_application_1/widgets/loginPage/ForgotPassword/VerificationMethods.dart';
 
 class SignIn extends StatefulWidget {
@@ -14,7 +15,9 @@ class _SignInState extends State<SignIn> {
   bool _viewPassword = false;
 
   void _changeVisibility() {
-    _viewPassword = !_viewPassword;
+    setState(() {
+      _viewPassword = !_viewPassword;
+    });
   }
 
   var _checked = false;
@@ -172,7 +175,8 @@ class _SignInState extends State<SignIn> {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Homepage()));
+                        MaterialPageRoute(builder: (context) => Layout(child: Homepage())),
+                      );
                     },
                     child: Ink(
                       decoration: BoxDecoration(
